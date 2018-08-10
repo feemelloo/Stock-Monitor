@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    tools:context="com.stockmonitor.stockmonitor.MainActivity">
+
+    <EditText
+        android:id="@+id/symbolText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/symbolText_hint"
+        android:inputType="textFilter"
+        android:textAllCaps="true"
+        android:textSize="40sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
+
+    <Button
+        android:id="@+id/searchButton"
+        style="@style/Base.Widget.AppCompat.Button"
+        android:layout_width="74dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/colorAccent"
+        android:text="@string/searchButton_text"
+        android:textColor="#FFFF"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="#F5F5F5"
+        android:layout_marginTop="15dp">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:indeterminate="true"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/priceView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:textSize="50sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/quoteView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
